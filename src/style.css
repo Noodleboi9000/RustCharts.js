@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+}
+
+.container {
+    width: 50%;
+    background: black;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.graphs {
+    display: flex;
+    justify-content: center;
+}
+
+.spaceBetweenGraphs {
+    margin: 20px;
+}
+
+.divider {
+    height: 1px;
+    background: white;
+    margin: 5px auto;
+    opacity: 0.2;
+}
+
+canvas {
+    width: 100%;
+    max-width: 800px;
+    height: 300px;
+}
