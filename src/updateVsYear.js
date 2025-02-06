@@ -1,6 +1,6 @@
 import Chart from 'chart.js/auto'
 
-(async function() {
+(async function() { //array for year and update count
   const updateVsYr = [
     { year: 2014, count: 170 },
     { year: 2015, count: 159 },
@@ -23,9 +23,10 @@ import Chart from 'chart.js/auto'
     }
     return sum / updateVsYr.length
   }
+  //same process as in playerCountByYear.js - loop for average update count
 
   function displayAverageUpdates() { //function to update HTML content
-    const avgCount = averageUpdatesAYear(updateVsYr).toFixed(2);
+    const avgCount = averageUpdatesAYear(updateVsYr).toFixed(0);
     document.getElementById("pTag").textContent = `The average number of updates produced over the course of the games lifetime is ${avgCount}`
   }
 

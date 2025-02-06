@@ -650,6 +650,20 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
             count: 262284
         }
     ];
+    function averageUpdatesAYear(playerVsYear) {
+        let sum = 0;
+        for(let i = 0; i < playerVsYear.length; i++)sum += playerVsYear[i].count;
+        return sum / playerVsYear.length;
+    }
+    //for loop is looping through the array starting at i which is set to 0 and itterating until the array is complete
+    //we only want to average out the count so .count is used after the array call "playerVsYear[i].count"
+    function displayAveragePlayers() {
+        const avgCount = averageUpdatesAYear(playerVsYear).toFixed(0);
+        document.getElementById("AvgPlayers").textContent = `The overall average number of players per month over the course of the games lifetime is ${avgCount}.`;
+    }
+    //Calling the function setting the average number and storing it in a new varibale. .toFixed(0) is used to removed the decimal places
+    //document.getElementById to link to the id on a P tag in inxex.html. .textContent will change the placeholder text in the tag to =
+    displayAveragePlayers();
     new (0, _autoDefault.default)(document.getElementById('playerCountByYr'), {
         type: 'line',
         data: {
@@ -659,8 +673,7 @@ var _autoDefault = parcelHelpers.interopDefault(_auto);
                     label: 'Rust Player Count by Year',
                     data: playerVsYear.map((row)=>row.count),
                     borderColor: 'white',
-                    backgroundColor: 'white',
-                    fill: true
+                    backgroundColor: 'white'
                 }
             ]
         }
